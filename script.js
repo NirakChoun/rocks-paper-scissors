@@ -11,4 +11,14 @@ function getComputerChoice() {
     }
 }
 
+function getHumanChoice() {
+    let humanChoice = String(prompt("Enter your choice: ")).toLowerCase();
+    return humanChoice;
+}
+
+let computerChoice = getComputerChoice();
+let humanChoice = getHumanChoice();
+
+console.log(`Computer Choice: ${computerChoice}`);
+console.log(`Human Choice: ${humanChoice}`);
 
