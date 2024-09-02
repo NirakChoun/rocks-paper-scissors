@@ -70,6 +70,9 @@ function playGame() {
 
     let buttons = document.querySelector(".buttons");
     let resetBtn = document.querySelector("#resetBtn");
+    let rockBtn = document.querySelector("#rockBtn");
+    let paperBtn = document.querySelector("#paperBtn");
+    let scissorsBtn = document.querySelector("#scissorsBtn");
 
     let playerChoice = document.querySelector("#playerChoice");
     let computerChoice = document.querySelector("#computerChoice");
@@ -170,25 +173,38 @@ function playGame() {
             if (winner === "Draw") {
                 setTimeout(() => {
                     alert("Game Over! It's a draw!");
-                }, 3000);
+                }, 2000);
             }
             else {
                 setTimeout(() => {
                     alert(`Game Over! The winner is ${winner}!`);
-                }, 3000);
+                }, 2000);
             }
+            rockBtn.disabled = true;
+            paperBtn.disabled = true;
+            scissorsBtn.disabled = true;
+            rockBtn.style.opacity = 0.5;
+            paperBtn.style.opacity = 0.5;
+            scissorsBtn.style.opacity = 0.5;
         }    
     });
 
     resetBtn.addEventListener("click", () => {
         playerScore = 0;
         computerScore = 0;
+        rockBtn.disabled = false;
+        paperBtn.disabled = false;
+        scissorsBtn.disabled = false;
+        rockBtn.style.opacity = 1;
+        paperBtn.style.opacity = 1;
+        scissorsBtn.style.opacity = 1;
         playerScoreDisplay.textContent = playerScore;
         computerScoreDisplay.textContent = playerScore;
         playerChoice.textContent = "?";
         computerChoice.textContent = "?";
         currentRound = 1;
         maxRounds = 5;
+        
     });
 }
 
