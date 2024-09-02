@@ -69,6 +69,7 @@ function playGame() {
     computerScoreDisplay.textContent = playerScore;
 
     let buttons = document.querySelector(".buttons");
+    let resetBtn = document.querySelector("#resetBtn");
 
     let playerChoice = document.querySelector("#playerChoice");
     let computerChoice = document.querySelector("#computerChoice");
@@ -178,7 +179,17 @@ function playGame() {
             }
         }    
     });
-    
+
+    resetBtn.addEventListener("click", () => {
+        playerScore = 0;
+        computerScore = 0;
+        playerScoreDisplay.textContent = playerScore;
+        computerScoreDisplay.textContent = playerScore;
+        playerChoice.textContent = "?";
+        computerChoice.textContent = "?";
+        currentRound = 1;
+        maxRounds = 5;
+    });
 }
 
 playGame();

@@ -55,4 +55,22 @@ body {
     padding: 5px;
     border: 2px solid #000;
     border-radius: 10px;
+    background-color: #FFBF00;
+}
+
+.container .reset {
+    display: flex;
+    justify-content: center;
+}
+
+.container .reset button {
+    font-family: "Press Start 2P", system-ui;
+    margin-top: 100px;
+    font-size: 1.5em;
+    width: 200px;
+    padding: 5px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
 }
